@@ -1,1 +1,1 @@
-module.exports = require('./dirac-middleware');
+module.exports = require('./lib/dirac-middleware');
