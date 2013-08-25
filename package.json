@@ -1,0 +1,27 @@
+{
+  "name": "dirac-middleware",
+  "version": "0.0.1",
+  "description": "Express middleware for building JSON HTTP interfaces with dirac",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jrf0110/dirac-middleware.git"
+  },
+  "keywords": [
+    "express",
+    "middleware",
+    "dirac",
+    "postgres",
+    "api"
+  ],
+  "author": "John Fawcett",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "07e1494a7078ea6845b30535c82f45c9b5f0621d",
+  "peerDependencies": {
+    "dirac": "0.0.x"
+  }
+}
