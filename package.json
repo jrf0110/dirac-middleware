@@ -23,5 +23,8 @@
   "gitHead": "07e1494a7078ea6845b30535c82f45c9b5f0621d",
   "peerDependencies": {
     "dirac": "0.0.x"
+  },
+  "dependencies": {
+    "pluralize": "0.0.5"
   }
 }
