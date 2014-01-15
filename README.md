@@ -67,7 +67,7 @@ dm.middleware_fn_name( 'some_arg', function( $query, options, ... ){
 })
 ```
 
-### ```root```
+### ```root( [options] )```
 
 The exported value for this module is actually a middleware function to be used within the express ```app.use``` function:
 
@@ -80,8 +80,17 @@ var app = express();
 
 app.configure(function(){
   // Initialize dirac query objects on each request
-  app.use( dm() );
+  app.use( dm({ envelope: true }) );
 });
+```
+
+__Parameters__:
+
+```
+* [options]
+  + envelope - Whether or not the response should enveloped
+               e.g { data: [/*...*/] } rather than just: [/*...*/]
+               Default: false
 ```
 
 ### ```dm.queryObj```
