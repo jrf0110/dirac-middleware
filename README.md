@@ -80,7 +80,7 @@ var app = express();
 
 app.configure(function(){
   // Initialize dirac query objects on each request
-  app.use( dm() );
+  app.use( dm({ envelope: true }) );
 });
 ```
 
