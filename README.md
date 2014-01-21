@@ -183,7 +183,7 @@ app.get( '/api/users'
 
 Some of the functions in this module expect to be route handlers. Since we're building up these query objects that just end up passing the data straight from the DB to the client, it makes sense to create generic route handlers.
 
-### ```dm.view( view_name, [dirac_collection] )```
+### ```dm.view( view_name, [dirac_collection], [options] )```
 
 __Parameters:__
 
@@ -192,6 +192,9 @@ __Parameters:__
 * dirac_collection  [optional] - Reference to the dirac collection needing to perform
                                  the query. If none is passed, no data extra data will
                                  be passed to the view
+* options           [optional] - Object that will be passed to the render function. Can
+                                 also be used to specify which dirac.dal method to use
+                                 e.g. find, findOne, update, etc...
 ```
 
 __Example:__
@@ -201,7 +204,9 @@ __Example:__
 app.get( '/users/:id'
 , dm.param( 'id' )
 , dm.returning( 'id', 'name' )
-, dm.view( 'single_user_view', db.users )
+, dm.view( 'single_user_view', db.users, {
+    layout: 'admin/layout'
+  })
 );
 ```
 
