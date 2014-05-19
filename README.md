@@ -210,4 +210,20 @@ app.get( '/users/:id'
 );
 ```
 
-### ```dm.find
+__Special Options:__
+
+To override `error` and `not found` behavior:
+
+```javascript
+app.get( '/users/:id'
+, dm.param( 'id' )
+, dm.returning( 'id', 'name' )
+, dm.view( 'single_user_view', db.users, {
+    layout: 'admin/layout'
+  , notFound: function( req, res ){ res.render('404'); }
+  , error: function( error, req, res ){ res.render('error', { error: error }); }
+  })
+);
+```
+
+### TODO: FINISH DOCS
