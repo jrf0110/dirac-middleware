@@ -1,6 +1,6 @@
 {
   "name": "dirac-middleware",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Express middleware for building JSON HTTP interfaces with dirac",
   "main": "index.js",
   "scripts": {
